@@ -12,3 +12,6 @@ in Context-Aware Recommendation](https://www.aclweb.org/anthology/N18-1145.pdf)
 5. [Multi-Class Text Classification with Doc2Vec & Logistic Regression](https://towardsdatascience.com/multi-class-text-classification-with-doc2vec-logistic-regression-9da9947b43f4)
 
 6. [A gentle introduction to Doc2Vec](https://medium.com/wisio/a-gentle-introduction-to-doc2vec-db3e8c0cce5e)
+
+7. [Visualizing high-dimensional Data](https://towardsdatascience.com/visualising-high-dimensional-datasets-using-pca-and-t-sne-in-python-8ef87e7915b)
+
