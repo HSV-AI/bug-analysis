@@ -15,3 +15,4 @@ in Context-Aware Recommendation](https://www.aclweb.org/anthology/N18-1145.pdf)
 
 7. [Visualizing high-dimensional Data](https://towardsdatascience.com/visualising-high-dimensional-datasets-using-pca-and-t-sne-in-python-8ef87e7915b)
 
+8. [Training Doc2Vec on Wikipedia](https://github.com/RaRe-Technologies/gensim/blob/develop/docs/notebooks/doc2vec-wikipedia.ipynb)
