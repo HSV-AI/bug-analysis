@@ -6,15 +6,15 @@ class TestDoc2Vec(unittest.TestCase):
     def test_load(self):
         rec = Doc2VecRec()
         self.assertIsNone(rec.model)
-        rec.load('data/bugzilla.doc2vec')
+        rec.load('hsvai/data/bugzilla.doc2vec')
         self.assertIsNotNone(rec.model)
 
     def test_constuctor(self):
-        rec = Doc2VecRec('data/bugzilla.doc2vec')
+        rec = Doc2VecRec('hsvai/data/bugzilla.doc2vec')
         self.assertIsNotNone(rec.model)
 
     def test_recommender(self):
-        rec = Doc2VecRec('data/bugzilla.doc2vec')
+        rec = Doc2VecRec('hsvai/data/bugzilla.doc2vec')
         result = rec.recommend_closest("The grammar rules have a problem with linking external files")
         self.assertIsNotNone(result)
         self.assertGreater(len(result), 0)
