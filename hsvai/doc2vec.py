@@ -6,12 +6,14 @@ import re
 from typing import List, Tuple
 from gensim.models.doc2vec import Doc2Vec
 import spacy
+import pkg_resources
 
 class Doc2VecRec:
     """Provides a wrapper around a Gensim Doc2Vec model"""
 
     nlp = spacy.load("en_core_web_sm")
 
+#TODO - see if there is something to anchor the start of the exception to something other than checking everything
     exception_regex = \
         re.compile(r".+Exception[^\n].*\s+at", re.MULTILINE | re.IGNORECASE)
     greater_regex = \
@@ -30,8 +32,11 @@ class Doc2VecRec:
     highest_text: str = None
     lowest_text: str = None
 
-    def __init__(self, filename: str=None):
+    def __init__(self, filename: str = None):
         if filename is not None:
+            self.load(filename)
+        else:
+            filename = pkg_resources.resource_filename('hsvai','data/bugzilla.doc2vec')
             self.load(filename)
 
     def reset_metrics(self):
@@ -51,9 +56,9 @@ class Doc2VecRec:
         """Load a previously trained model"""
         self.model = Doc2Vec.load(filename)
 
+#TODO - Figure out how to document the parameters here as well!!!
     def recommend_closest(self, text: str) -> List[Tuple[float, float]]:
         """Recomends the 'closest' bugs to the text string passed in.
-        
         :raises:
             RuntimeError: if the Doc2Vec Model has not been loaded..
         """

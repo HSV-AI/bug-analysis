@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="bug-analysis", # Replace with your own username
+    name="hsvai", # Replace with your own username
     version="0.0.1",
     author="J. Langley",
     author_email="jameselangley@gmail.com",
@@ -19,6 +19,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
-    include_package_data=True,
-    data_files=[('data',['data/bugzilla.doc2vec'])],
+    package_data={
+        'hsvai': ['data/*'],
+    },
 )
